@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<GridPane hgap="5" vgap="10" xmlns="http://javafx.com/javafx/8.0.5" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Editor_controller">
+<VBox GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <MenuBar>
+        <Menu text="File">
+            <MenuItem onAction="#open" text="Open" />
+            <MenuItem onAction="#Save" text="Save" />
+            <MenuItem fx:id="exit" onAction="#exit" text="Exit" />
+        </Menu>
+        <Menu text="Edit">
+            <MenuItem onAction="#cut" text="Cut" />
+            <MenuItem onAction="#copy" text="Copy" />
+            <MenuItem onAction="#paste" text="Paste" />
+        </Menu>
+        <Menu text="Help">
+            <MenuItem onAction="#help" text="About" />
+        </Menu>
+    </MenuBar>
+</VBox>
+    <Label scaleX="2" scaleY="2" GridPane.columnIndex="1" GridPane.rowIndex="1">Enter the test here...</Label>
+
+   <TextArea fx:id="editor" GridPane.columnIndex="1" GridPane.rowIndex="2">
+
+   </TextArea>
+    <Button fx:id="save" onAction="#Save" GridPane.rowIndex="6">
+        Save
+    </Button>
+    <Button fx:id="reset" onAction="#Reset" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        Reset
+    </Button>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
